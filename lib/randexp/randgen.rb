@@ -54,6 +54,10 @@ class Randgen
     "#{first_name(options)} #{surname(options)}"
   end
 
+  def self.email(options = {})
+    "#{word(options)}@#{word(options)}.com"
+  end
+
   def self.sentence(options = {})
     ((options[:length] || WORDS_PER_SENTENCE.pick).of { word } * " ").capitalize
   end
